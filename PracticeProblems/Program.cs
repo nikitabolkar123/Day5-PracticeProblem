@@ -6,20 +6,16 @@ namespace PracticeProblems
     {
         public static void Main(String[] args)
         {
-            Console.WriteLine("Enter a Year");
-            int year = int.Parse(Console.ReadLine());
-            IsleapYear(year);
-        }
-        public static void IsleapYear(int n)
-        {
-            if (((n % 4 == 0) && (n % 100 != 0)) || (n % 400 == 0))
+            Console.WriteLine("entre a no");
+            int no = int.Parse(Console.ReadLine());
+            int temp = no;
+            int power = 1;
+            while (no != 0)
             {
-                Console.WriteLine("It is a Leap Year");
+                power = power * 2;
+                no--;
             }
-            else
-            {
-                Console.WriteLine("Its not a Leap Year");
-            }
+            Console.WriteLine($"Power of 2 ^ {temp} is : {power}");
         }
     }
 }
