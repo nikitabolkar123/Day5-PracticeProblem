@@ -6,16 +6,15 @@ namespace PracticeProblems
     {
         public static void Main(String[] args)
         {
-            Console.WriteLine("entre a no");
-            int no = int.Parse(Console.ReadLine());
-            int temp = no;
-            int power = 1;
-            while (no != 0)
-            {
-                power = power * 2;
-                no--;
-            }
-            Console.WriteLine($"Power of 2 ^ {temp} is : {power}");
+
+            Console.WriteLine("enter dividend:");
+            int div = int.Parse(Console.ReadLine());
+            Console.WriteLine("entre divisor:");
+            int divisor = int.Parse(Console.ReadLine());
+            int quotient = div / divisor;
+            int rem = div % divisor;
+            Console.WriteLine($" Qutient :{quotient}");
+            Console.WriteLine($" Remender :{rem}");
         }
     }
 }
