@@ -4,22 +4,34 @@ namespace PracticeProblems
 {
     internal class Program
     {
+        static int hco = 0;
+        static int tco = 0;
+
         static void Main(string[] args)
         {
-
-            Console.WriteLine("entre a no:");
-            int no = int.Parse(Console.ReadLine());
-            HarmonicNum(no);
+            FlipCoin(4);
         }
-        public static void HarmonicNum(int n)
+        public static void FlipCoin(int n)
         {
-            double series = 0;
-            for (int i = 1; i <= n; i++)
+            int temp = n;
+            Random rnd = new Random();
+            while (n != 0)
             {
-                series += 1 / (float)i;
+                double random = rnd.NextDouble();
+                if (random <= 0.5)
+                {
+                    tco = tco + 1;
+                }
+                else
+                {
+                    hco++;
+                }
+                n = n - 1;
             }
-            Console.WriteLine($"Harmonic number : {series}");
+            Console.WriteLine((hco * 100) / temp);
+            Console.WriteLine((tco * 100) / temp);
+
+
         }
     }
 }
-
