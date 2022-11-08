@@ -6,21 +6,14 @@ namespace PracticeProblems
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("enter a no");
+            Console.WriteLine("entre a no:");
             int n = int.Parse(Console.ReadLine());
-            EvenOdd(n);
-        }
-        public static void EvenOdd(int no)
-        {
-
-            if (no % 2 == 0)
+            int fact = 1;
+            for (int i = 1; i <= n; i++)
             {
-                Console.WriteLine("no is even");
+                fact = fact * i;
             }
-            else
-            {
-                Console.WriteLine("no is odd");
-            }
+            Console.WriteLine($"Factorial of {n} is {fact}");
         }
     }
 }
