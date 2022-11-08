@@ -4,34 +4,26 @@ namespace PracticeProblems
 {
     internal class Program
     {
-        static int hco = 0;
-        static int tco = 0;
-
-        static void Main(string[] args)
+        public static void Main(String[] args)
         {
-            FlipCoin(4);
-        }
-        public static void FlipCoin(int n)
-        {
-            int temp = n;
-            Random rnd = new Random();
-            while (n != 0)
+            Console.WriteLine("Please Enter Your First Number: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please Enter Your Second Number: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please Enter Your Third Number: ");
+            int c = Convert.ToInt32(Console.ReadLine());
+            if (a > b && a > c)
             {
-                double random = rnd.NextDouble();
-                if (random <= 0.5)
-                {
-                    tco = tco + 1;
-                }
-                else
-                {
-                    hco++;
-                }
-                n = n - 1;
+                Console.WriteLine("Maximum Number is :" + a);
             }
-            Console.WriteLine((hco * 100) / temp);
-            Console.WriteLine((tco * 100) / temp);
-
-
+            else if (b > c && b > a)
+            {
+                Console.WriteLine("Maximum Number is " + b);
+            }
+            else
+            {
+                Console.WriteLine("Maximum Number is " + c);
+            }
         }
     }
 }
