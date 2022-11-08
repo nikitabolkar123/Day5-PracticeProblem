@@ -6,14 +6,20 @@ namespace PracticeProblems
     {
         static void Main(string[] args)
         {
+
             Console.WriteLine("entre a no:");
-            int n = int.Parse(Console.ReadLine());
-            int fact = 1;
+            int no = int.Parse(Console.ReadLine());
+            HarmonicNum(no);
+        }
+        public static void HarmonicNum(int n)
+        {
+            double series = 0;
             for (int i = 1; i <= n; i++)
             {
-                fact = fact * i;
+                series += 1 / (float)i;
             }
-            Console.WriteLine($"Factorial of {n} is {fact}");
+            Console.WriteLine($"Harmonic number : {series}");
         }
     }
 }
+
