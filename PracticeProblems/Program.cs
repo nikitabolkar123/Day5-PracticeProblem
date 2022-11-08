@@ -6,23 +6,19 @@ namespace PracticeProblems
     {
         public static void Main(String[] args)
         {
-            Console.WriteLine("Please Enter Your First Number: ");
-            int a = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Please Enter Your Second Number: ");
-            int b = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Please Enter Your Third Number: ");
-            int c = Convert.ToInt32(Console.ReadLine());
-            if (a > b && a > c)
+            Console.WriteLine("Enter a Year");
+            int year = int.Parse(Console.ReadLine());
+            IsleapYear(year);
+        }
+        public static void IsleapYear(int n)
+        {
+            if (((n % 4 == 0) && (n % 100 != 0)) || (n % 400 == 0))
             {
-                Console.WriteLine("Maximum Number is :" + a);
-            }
-            else if (b > c && b > a)
-            {
-                Console.WriteLine("Maximum Number is " + b);
+                Console.WriteLine("It is a Leap Year");
             }
             else
             {
-                Console.WriteLine("Maximum Number is " + c);
+                Console.WriteLine("Its not a Leap Year");
             }
         }
     }
